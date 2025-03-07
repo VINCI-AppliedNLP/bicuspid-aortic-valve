@@ -1,6 +1,6 @@
 # import spacy
 from spacy import Language
-
+import os
 import medspacy
 # from spacy.tokens import Span
 from medspacy.target_matcher import TargetRule
@@ -34,24 +34,26 @@ def nlp_factory(**kwargs) -> Language:
 
     nlp = medspacy.load(medspacy_enable=["medspacy_pyrush"])
 
-
+    base_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'resources'))
+    valve_rules_path = os.path.join(base_path, 'valve_ent_rules.json')
+    context_rules_path = os.path.join(base_path, 'context_rules.json')
+    structure_rules_path = os.path.join(base_path, 'structure_rules.json')
     # load target_matcher - valve ents
-    valve_rules = TargetRule.from_json(
-        'bicuspid_AV_pipeline\\resources\\valve_ent_rules.json')
+    valve_rules = TargetRule.from_json(valve_rules_path)
     target_matcher = nlp.add_pipe("medspacy_target_matcher")
     target_matcher.add(valve_rules)
 
     # context
     nlp.add_pipe("medspacy_context"
                  , config={
-            "rules": 'bicuspid_AV_pipeline\\resources\\context_rules.json'})
+            "rules": context_rules_path})
 
     # structures
     nlp.add_pipe("medspacy_context",
                  name='structures',
                  after='medspacy_context',
                  config={
-                     "rules": 'bicuspid_AV_pipeline\\resources\\structure_rules.json',
+                     "rules": structure_rules_path,
                      "span_attrs": None})
 
     # connect valves and structures - custom component in the pipeline components folder

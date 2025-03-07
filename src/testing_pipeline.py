@@ -1,11 +1,15 @@
 
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from src.pipeline_creator import nlp_factory
 
 # print("starting processing...")
 # start_time = timeit.default_timer()
 #
 
-text1 = "Cannot\nexclude bicuspid aortic valve."
+text1 = "Testing Sentence: Cannot\nexclude bicuspid aortic valve."
 
 print(text1)
 
