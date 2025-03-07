@@ -1,0 +1,244 @@
+{
+    "context_rules": [
+        {
+            "category": "BICUSPID_STRUCTURE",
+            "direction": "BIDIRECTIONAL",
+            "max_targets": 1,
+            "literal": "bicuspid"
+        },
+		{
+            "category": "BICUSPID_STRUCTURE",
+            "direction": "BIDIRECTIONAL",
+            "max_targets": 1,
+            "literal": "bicusp"
+        },
+        {
+            "category": "BICUSPID_STRUCTURE",
+            "direction": "BIDIRECTIONAL",
+            "max_targets": 1,
+            "literal": "bileaflet"
+        },
+        {
+            "pattern": [
+                {
+                    "LOWER": "bi"
+                },
+                {
+                    "IS_PUNCT": true,
+                    "OP": "?"
+                },
+                {
+                    "LOWER": "cuspid"
+                }
+            ],
+            "category": "BICUSPID_STRUCTURE",
+            "direction": "BIDIRECTIONAL",
+            "max_targets": 1,
+            "literal": "bi-cuspid"
+        },
+        {
+            "pattern": [
+                {
+                    "LOWER": "bi"
+                },
+                {
+                    "IS_PUNCT": true,
+                    "OP": "?"
+                },
+                {
+                    "LOWER": "leaflet"
+                }
+            ],
+            "category": "BICUSPID_STRUCTURE",
+            "direction": "BIDIRECTIONAL",
+            "max_targets": 1,
+            "literal": "bi-leaflet"
+        },
+        {
+            "pattern": [
+                {
+                    "LOWER": "native"
+                },
+                {"IS_SPACE":true, "OP": "*"},
+                {
+                    "LOWER": "bicuspid"
+                }
+            ],
+            "category": "BICUSPID_STRUCTURE",
+            "direction": "BIDIRECTIONAL",
+            "max_targets": 1,
+            "literal": "native bicuspid"
+        },
+        {
+            "category": "TRICUSPID_STRUCTURE",
+            "direction": "BIDIRECTIONAL",
+            "max_targets": 1,
+            "literal": "tricuspid"
+        },
+        {
+            "category": "TRICUSPID_STRUCTURE",
+            "direction": "BIDIRECTIONAL",
+            "max_targets": 1,
+            "literal": "trileaflet"
+        },
+        {
+            "pattern": [
+                {
+                    "LOWER": "tri"
+                },
+                {
+                    "IS_PUNCT": true,
+                    "OP": "?"
+                },
+                {
+                    "LOWER": "cuspid"
+                }
+            ],
+            "category": "TRICUSPID_STRUCTURE",
+            "direction": "BIDIRECTIONAL",
+            "max_targets": 1,
+            "literal": "tri-cuspid"
+        },
+        {
+            "pattern": [
+                {
+                    "LOWER": "tri"
+                },
+                {
+                    "IS_PUNCT": true,
+                    "OP": "?"
+                },
+                {
+                    "LOWER": "leaflet"
+                }
+            ],
+            "category": "TRICUSPID_STRUCTURE",
+            "direction": "BIDIRECTIONAL",
+            "max_targets": 1,
+            "literal": "tri-leaflet"
+        },
+        {
+            "pattern": [
+                {
+                    "LOWER": "normal"
+                },
+                {"IS_SPACE":true, "OP": "*"},
+                {
+                    "LOWER": "trileaflet"
+                }
+            ],
+            "category": "TRICUSPID_STRUCTURE",
+            "direction": "BIDIRECTIONAL",
+            "max_targets": 1,
+            "literal": "normal trileaflet"
+        },
+        {
+            "category": "NORMAL_STRUCTURE",
+            "direction": "BIDIRECTIONAL",
+            "max_targets": 1,
+            "literal": "normal"
+        },
+        {
+            "category": "NORMAL_STRUCTURE",
+            "direction": "BIDIRECTIONAL",
+            "max_targets": 1,
+            "literal": "unremarkable"
+        },
+        {
+            "pattern": [
+                {
+                    "LOWER": "normal"
+                },
+                {"IS_SPACE":true, "OP": "*"},
+                {
+                    "LOWER": "structure"
+                }
+            ],
+            "category": "NORMAL_STRUCTURE",
+            "direction": "BIDIRECTIONAL",
+            "max_targets": 1,
+            "literal": "normal structure"
+        },
+        {
+            "pattern": [
+                {
+                    "LOWER": "structurally"
+                },
+                {"IS_SPACE":true, "OP": "*"},
+                {
+                    "LOWER": "normal"
+                }
+            ],
+            "category": "NORMAL_STRUCTURE",
+            "direction": "BIDIRECTIONAL",
+            "max_targets": 1,
+            "literal": "structurally normal"
+        },
+		{
+            "pattern": [
+                {
+                    "LOWER": "functional"
+                },
+                {"IS_SPACE":true, "OP": "*"},
+                {
+                    "LOWER": "bicuspid"
+                }
+            ],
+            "category": "FUNC_BICUSPID_STRUCTURE",
+            "direction": "BIDIRECTIONAL",
+            "max_targets": 1,
+            "literal": "functional bicuspid"
+        },
+		{
+            "pattern": [
+                {
+                    "LOWER": "functionally"
+                },
+                {"IS_SPACE":true, "OP": "*"},
+                {
+                    "LOWER": "bicuspid"
+                }
+            ],
+            "category": "FUNC_BICUSPID_STRUCTURE",
+            "direction": "BIDIRECTIONAL",
+            "max_targets": 1,
+            "literal": "functionally bicuspid"
+        },
+		{
+            "category": "PROSTHETIC_FLAG",
+            "direction": "BIDIRECTIONAL",
+            "max_targets": 1,
+            "literal": "prosthesis"
+        },
+		{
+            "category": "PROSTHETIC_FLAG",
+            "direction": "BIDIRECTIONAL",
+            "max_targets": 1,
+            "literal": "prosthetic"
+        },
+		{
+            "category": "PROSTHETIC_FLAG",
+            "direction": "BIDIRECTIONAL",
+            "max_targets": 1,
+            "literal": "mechanical"
+        },
+		{
+            "category": "PROSTHETIC_FLAG",
+            "direction": "BIDIRECTIONAL",
+            "max_targets": 1,
+            "literal": "mechanic"
+        },
+		{
+            "category": "PROSTHETIC_FLAG",
+            "direction": "BIDIRECTIONAL",
+            "max_targets": 1,
+            "literal": "bioprosthesis"
+        },
+		{
+            "category": "PROSTHETIC_FLAG",
+            "direction": "BIDIRECTIONAL",
+            "max_targets": 1,
+            "literal": "bioprosthetic"
+        }
+    ]
+}

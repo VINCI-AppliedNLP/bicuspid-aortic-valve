@@ -1,0 +1,68 @@
+{
+    "target_rules": [
+        {
+            "category": "AORTIC_VALVE",
+            "literal": "aortic valve"
+        },
+        {
+            "category": "AORTIC_VALVE",
+            "literal": "aortic vlave"
+        },
+        {
+            "category": "AORTIC_VALVE",
+            "literal": "arotic valve"
+        },
+        {
+            "category": "AORTIC_VALVE",
+            "literal": "aortic valves"
+        },
+        {
+            "category": "AORTIC_VALVE",
+            "literal": "aortic valvular"
+        },
+        {
+            "category": "AORTIC_VALVE",
+            "literal": "aortic cusps"
+        },
+        {
+            "category": "AORTIC_VALVE",
+            "literal": "AoValve"
+        },
+        {
+            "category": "AORTIC_VALVE",
+            "literal": "AO valve"
+        },
+        {
+            "category": "AORTIC_VALVE",
+            "literal": "AV"
+        },
+        {
+            "category": "AORTIC_VALVE",
+            "literal": "AoV"
+        },
+        {
+            "category": "MITRAL_VALVE",
+            "literal": "mitral valve"
+        },
+        {
+            "category": "MITRAL_VALVE",
+            "literal": "mitral leaflets"
+        },
+        {
+            "category": "PULMONIC_VALVE",
+            "literal": "pulmonic valve"
+        },
+        {
+            "category": "PULMONIC_VALVE",
+            "literal": "pulmonic valvular"
+        },
+        {
+            "category": "TRICUSPID_VALVE",
+            "literal": "tricuspid valve"
+        },
+        {
+            "category": "TRICUSPID_VALVE",
+            "literal": "tricuspid valves"
+        }
+    ]
+}

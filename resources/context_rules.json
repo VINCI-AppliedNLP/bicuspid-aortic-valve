@@ -1,0 +1,777 @@
+{
+  "context_rules": [
+	{
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "?",
+      "pattern": null,
+      "direction": "BIDIRECTIONAL"
+    },
+	{
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "cannot visualize",
+      "pattern": [{"lower": "can"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "not"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "visualize"}],
+      "direction": "FORWARD"
+    },
+    {
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "suspect",
+      "pattern": null,
+      "direction": "BIDIRECTIONAL"
+    },
+	{
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "suspected",
+      "pattern": null,
+      "direction": "BIDIRECTIONAL"
+    },
+	{
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "questionable",
+      "pattern": null,
+      "direction": "BIDIRECTIONAL"
+    },
+	{
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "question of",
+      "pattern": [{"lower": "question"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "of"}],
+      "direction": "BIDIRECTIONAL"
+    },
+	{
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "possibility",
+      "pattern": null,
+      "direction": "BIDIRECTIONAL"
+    },
+	{
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "could be",
+      "pattern": [{"lower": "could"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "be"}],
+      "direction": "BACKWARD"
+    },
+	{
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "could not be excluded",
+      "pattern": [{"lower": "could"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "not"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "be"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "excluded"}],
+      "direction": "BACKWARD"
+    },
+	{
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "cannot be excluded",
+      "pattern": [{"lower": "can"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "not"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "be"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "excluded"}],
+      "direction": "BACKWARD"
+    },
+	{
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "cannot fully exclude",
+      "pattern": [{"lower": "can"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "not"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "fully"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "exclude"}],
+      "direction": "BACKWARD"
+    },
+	{
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "cannot exclude",
+      "pattern": [{"lower": "can"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "not"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "exclude"}],
+      "direction": "FORWARD"
+    },
+	{
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "cannot exlude",
+      "pattern": [{"lower": "can"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "not"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "exlude"}],
+      "direction": "FORWARD"
+    },
+	{
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "cannot ro",
+      "pattern": [{"lower": "can"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "not"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "ro"}],
+      "direction": "FORWARD"
+    },
+	{
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "cannot rule out",
+      "pattern": [{"lower": "can"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "not"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "rule"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "out"}],
+      "direction": "FORWARD"
+    },
+	{
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "cannot r/o",
+      "pattern": [
+        {"lower": "can"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "not"},
+        {
+          "LOWER": "r"
+        },
+        {
+          "ORTH": "/"
+        },
+        {
+          "LOWER": "o"
+        }
+      ],
+      "direction": "FORWARD"
+    },
+    {
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "concerned about",
+      "pattern": [
+        {
+          "LOWER": {
+            "IN": ["concerned", "concerning"]
+          }
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": {
+            "IN": ["for", "about"]
+          }
+        }
+      ],
+      "direction": "FORWARD"
+    },
+    {
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "did not rule out",
+      "pattern": [
+        {
+          "LOWER": {
+            "IN": ["did", "could"]
+          }
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": {
+            "IN": ["not", "n't"]
+          }
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "rule"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "out"
+        }
+      ],
+      "direction": "BACKWARD"
+    },
+	{
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "doubt",
+      "pattern": null,
+      "direction": "FORWARD"
+    },
+	{
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "may be",
+      "pattern": [{"lower": "may"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "be"}],
+      "direction": "BACKWARD"
+    },
+    {
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "may be ruled out",
+      "pattern": [
+        {
+          "LOWER": {
+            "IN": ["may", "might", "must", "should", "will", "could", "can"]
+          },
+          "OP": "?"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "be"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "ruled"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "out"
+        }
+      ],
+      "direction": "BACKWARD"
+    },
+    {
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "may be ruled out for",
+      "pattern": [
+        {
+          "LOWER": {
+            "IN": ["may", "might", "must", "should", "will", "could", "can"]
+          },
+          "OP": "?"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "be"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "ruled"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "out"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "for"
+        }
+      ],
+      "direction": "FORWARD"
+    },
+    {
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "might be",
+      "pattern": [
+        {
+          "LOWER": {
+            "IN": ["may", "might"]
+          }
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "be"
+        }
+      ],
+      "direction": "FORWARD"
+    },
+    {
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "not ruled out",
+      "pattern": [
+        {
+          "LOWER": {
+            "IN": ["not", "n't"]
+          }
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "been",
+          "OP": "?"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "ruled"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "out"
+        }
+      ],
+      "direction": "BACKWARD"
+    },
+    {
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "is to be ruled out",
+      "pattern": [
+        {
+          "LOWER": {
+            "IN": ["is", "ought"]
+          }
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "to"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "be"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "ruled"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "out"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": {
+            "IN": ["for", "against"]
+          },
+          "OP": "?"
+        }
+      ],
+      "direction": "BACKWARD"
+    },
+    {
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "possible",
+      "pattern": [
+        {
+          "LOWER": {
+            "IN": ["poss", "possible", "possibly", "probably", "probable", "potentially", "likely"]
+          }
+        }
+      ],
+      "direction": "BIDIRECTIONAL"
+    },
+    {
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "r/o",
+      "pattern": null,
+      "direction": "FORWARD"
+    },
+    {
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "ro",
+      "pattern": null,
+      "direction": "FORWARD"
+    },
+	{
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "cannot rule-out",
+      "pattern": [
+        {"lower": "can"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "not"},
+        {
+          "LOWER": "rule"
+        },
+        {
+          "ORTH": "-"
+        },
+        {
+          "LOWER": "out"
+        }
+      ],
+      "direction": "FORWARD"
+    },
+    {
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "rule out",
+      "pattern": [
+        {
+          "LOWER": {
+            "IN": ["may", "might", "must", "should", "will", "could"]
+          },
+          "OP": "?"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "rule"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": {
+            "IN": ["him", "her", "them", "patient", "pt"]
+          },
+          "OP": "?"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "out"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": {
+            "IN": ["against", "for"]
+          },
+          "OP": "?"
+        }
+      ],
+      "direction": "FORWARD"
+    },
+    {
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "rule the patient out",
+      "pattern": [
+        {
+          "LOWER": {
+            "IN": ["may", "might", "must", "should", "will", "could"]
+          },
+          "OP": "?"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "rule"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "the"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": {
+            "IN": ["patient", "pt"]
+          }
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "out"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": {
+            "IN": ["against", "for"]
+          },
+          "OP": "?"
+        }
+      ],
+      "direction": "FORWARD"
+    },
+	{
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "difficult to be certain",
+      "pattern": [{"lower": "difficult"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "to"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "be"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "certain"}],
+      "direction": "BIDIRECTIONAL"
+    },
+    {
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "suggestive of",
+      "pattern": [{"lower": "suggestive"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "of"}],
+      "direction": "BIDIRECTIONAL"
+    },
+    {
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "suspicious for",
+      "pattern": [{"lower": "suspicious"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "for"}],
+      "direction": "BIDIRECTIONAL"
+    },
+    {
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "worrisome for",
+      "pattern": [{"lower": "worrisome"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "for"}],
+      "direction": "FORWARD"
+    },
+    {
+      "category": "POSSIBLE_EXISTENCE",
+      "literal": "worried about",
+      "pattern": [{"lower": "worried"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "about"}],
+      "direction": "FORWARD"
+    },
+	{
+      "category": "NEGATED_EXISTENCE",
+      "literal": "not have evidence of",
+      "pattern": [
+        {
+          "LOWER": {
+            "IN": ["not", "n't"]
+          }
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "have"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "evidence"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": {
+            "IN": ["of", "for"]
+          }
+        }
+      ],
+      "direction": "BACKWARD"
+    },
+	{
+      "category": "NEGATED_EXISTENCE",
+      "literal": "does not look like",
+      "pattern": [
+        {
+          "LOWER": {
+            "IN": ["does", "did"]
+          }
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": {
+            "IN": ["not", "n't"]
+          }
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "look"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "like"
+        }
+      ],
+      "direction": "FORWARD"
+    },
+	{
+      "category": "NEGATED_EXISTENCE",
+      "literal": "adequate to rule out",
+      "pattern": [
+        {
+          "LOWER": {
+            "IN": ["adequate", "sufficient"]
+          }
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "to"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "rule"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": {
+            "IN": ["him", "her", "them", "patient", "pt"]
+          },
+          "OP": "?"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "out"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": {
+            "IN": ["against", "for"]
+          },
+          "OP": "?"
+        }
+      ],
+      "direction": "FORWARD"
+    },
+    {
+      "category": "NEGATED_EXISTENCE",
+      "literal": "adequate to rule the patient out",
+      "pattern": [
+        {
+          "LOWER": {
+            "IN": ["adequate", "sufficient"]
+          }
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "to"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "rule"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "the"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": {
+            "IN": ["patient", "pt"]
+          }
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "out"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": {
+            "IN": ["against", "for"]
+          },
+          "OP": "?"
+        }
+      ],
+      "direction": "FORWARD"
+    },
+    {
+      "category": "NEGATED_EXISTENCE",
+      "literal": "are ruled out",
+      "pattern": [
+        {
+          "LOWER": {
+            "IN": ["are", "is", "was"]
+          }
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "ruled"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "out"
+        }
+      ],
+      "direction": "BACKWARD"
+    },
+    {
+      "category": "NEGATED_EXISTENCE",
+      "literal": "can rule out",
+      "pattern": [
+        {
+          "LOWER": {
+            "IN": ["can", "did"]
+          }
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "rule"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": {
+            "IN": ["him", "her", "them", "patient", "pt"]
+          },
+          "OP": "?"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "out"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": {
+            "IN": ["against", "for"]
+          },
+          "OP": "?"
+        }
+      ],
+      "direction": "FORWARD"
+    },
+    {
+      "category": "NEGATED_EXISTENCE",
+      "literal": "can rule the patient out",
+      "pattern": [
+        {
+          "LOWER": {
+            "IN": ["can", "did"]
+          }
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "rule"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "the"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": {
+            "IN": ["patient", "pt"]
+          }
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "out"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": {
+            "IN": ["against", "for"]
+          },
+          "OP": "?"
+        }
+      ],
+      "direction": "FORWARD"
+    },
+	{
+      "category": "NEGATED_EXISTENCE",
+      "literal": "has been ruled out",
+      "pattern": [
+        {
+          "LOWER": {
+            "IN": ["has", "have"]
+          }
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "been"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "ruled"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "out"
+        }
+      ],
+      "direction": "BACKWARD"
+    },
+	{
+      "category": "NEGATED_EXISTENCE",
+      "literal": "negative for",
+      "pattern": [
+        {
+          "LOWER": {
+            "IN": ["negative", "neg"]
+          }
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "for"
+        }
+      ],
+      "direction": "FORWARD"
+    },
+	{
+      "category": "NEGATED_EXISTENCE",
+      "literal": "absence of",
+      "pattern": [
+        {
+          "LOWER": "absence"
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": "of"
+        }
+      ],
+      "direction": "FORWARD"
+    },
+    {
+      "category": "NEGATED_EXISTENCE",
+      "literal": "no findings to indicate",
+      "pattern": [{"lower": "no"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "findings"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "to"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "indicate"}],
+      "direction": "FORWARD"
+    },
+	{
+      "category": "NEGATED_EXISTENCE",
+      "literal": "no convincing evidence",
+      "pattern": [{"lower": "no"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "convincing"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "evidence"}],
+      "direction": "FORWARD"
+    },
+	{
+      "category": "NEGATED_EXISTENCE",
+      "literal": "not identified",
+      "pattern": [{"lower": "not"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "identified"}],
+      "direction": "BACKWARD"
+    },
+	{
+      "category": "HISTORICAL",
+      "literal": "h/o",
+      "pattern": [
+        {
+          "LOWER": "h"
+        },
+        {
+          "ORTH": "/"
+        },
+        {
+          "LOWER": "o"
+        }
+      ],
+      "direction": "FORWARD"
+    },
+	{
+      "category": "HISTORICAL",
+      "literal": "history of",
+      "pattern": [{"lower": "history"}, {"IS_SPACE":true, "OP": "*"}, {"lower": "of"}],
+      "direction": "FORWARD"
+    },
+	{
+      "category": "HISTORICAL",
+      "literal": "history",
+      "pattern": [
+        {
+          "LOWER": {
+            "IN": ["history", "hx", "pmh", "ho"]
+          }
+        }
+      ],
+      "direction": "FORWARD"
+    },
+	{
+      "category": "FAMILY",
+      "literal": "family",
+      "pattern": [
+        {
+          "LOWER": {
+            "IN": [
+              "aunt",
+              "aunts",
+              "brother",
+              "brothers",
+              "child",
+              "children",
+              "cousin",
+              "cousins",
+              "dad",
+              "dads",
+              "daughter",
+              "daughters",
+              "fam",
+              "family",
+              "families",
+              "father",
+              "fathers",
+              "grandchild",
+              "grandchildren",
+              "granddaughter",
+              "granddaughters",
+              "grandfather",
+              "grandfathers",
+              "grandmother",
+              "grandmothers",
+              "grandparent",
+              "grandparents",
+              "grandson",
+              "grandsons",
+              "husband",
+              "mom",
+              "moms",
+              "mother",
+              "mothers",
+              "nephew",
+              "nephews",
+              "niece",
+              "nieces",
+              "parent",
+              "parents",
+              "partner",
+              "sibling",
+              "siblings",
+              "sister",
+              "sisters",
+              "son",
+              "sons",
+              "spouse",
+              "uncle",
+              "uncles",
+              "wife"
+            ]
+          }
+        }, {"IS_SPACE":true, "OP": "*"},
+        {
+          "LOWER": {
+            "IN": ["'s", "'"]
+          },
+          "OP": "?"
+        }
+      ],
+      "direction": "FORWARD"
+    }
+  ]
+}
